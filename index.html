@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Alarm Clock</title>
+</head>
+
+<body>
+    <section class="container">
+        <div id="clock"></div>
+        <p>Set Alarm</p><label><br>
+            <form class="addAlarm">
+                <div class="alarm_inputs">
+                    <input type="number" name="a_hour" placeholder="HH" max="12" min="00" required>
+                    <input type="number" name="a_min" placeholder="MM" max="59" min="00" required>
+                    <input type="number" name="a_sec" placeholder="SS" max="59" min="00" required>
+                    <select name="period" required>
+                        <option value="AM" selected>AM</option>
+                        <option value="PM">PM</option>
+                    </select>
+                </div>
+                <div class="controls">
+                    <button type="submit" class="set-alarm">Set Alarm</button>
+                    <button type="reset" onclick="clearAlarm()" class="clear-alarm">Clear </button>
+                </div>
+            </form>
+    </section>
+    <hr style="margin-top: 20px">
+
+    <section id="alarms">
+        <p class="alarm-heading" style="margin-top: -50px;">Upcoming Alarms</p>
+        <div>
+            <ul id="myList">
+            </ul>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
